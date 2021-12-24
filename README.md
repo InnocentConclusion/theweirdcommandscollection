@@ -44,3 +44,21 @@ Catch [System.Management.Automation.ActionPreferenceStopExecution]
 ``` netsh wlan show profile SSID key=clear ```
 
 Note: This can show ANY WiFi PSK the device has stored, use netsh wlan show profile to get a list of all available SSIDs.
+
+## Swapfile editing
+#### Rather basic commands, but good to know when you need to fix weird sudden freezes in nix boxes.
+Use ``` swapon --show ``` or ``` free -h ``` to check swapfile size.
+
+Step 1: Halt the swapfile
+``` sudo swapoff /swapfile ```
+
+Step 2: Resize the swap file
+``` sudo fallocate -l 4G /swapfile ```
+
+Step 3: Apply change
+``` sudo mkswap /swapfile ```
+
+Step 4: Reenable the swap file
+``` sudo swapon /swapfile ```
+
+Verify with ``` free -h ``` or ``` swapon --show ```
