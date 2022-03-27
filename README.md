@@ -62,3 +62,8 @@ Step 4: Reenable the swap file
 ``` sudo swapon /swapfile ```
 
 Verify with ``` free -h ``` or ``` swapon --show ```
+
+## Fix the hidden right-click menu in File Explorer in Windows 11 (Make 'Show More' default)
+@ cli run:
+``` reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /ve /d "" /f ```
+then reboot
