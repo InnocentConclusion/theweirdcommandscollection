@@ -4,7 +4,7 @@
 ## The Poor Man's nmap
 On a windows machine, this line conducts a ping scan similar to nmap on /24 networks:
 
-``` for /L %z in (1,1,254) do @ping 192.168.0.%z -w 10 -n | find "Reply" ```
+``` for /L %z in (1,1,254) do @ping 192.168.0.%z -w 10 -n 1 | find "Reply" ```
 
 ## VMWare Failed to Create VMFS Datastore Test Error
 #### Preface:
