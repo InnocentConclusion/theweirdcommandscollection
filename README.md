@@ -67,3 +67,7 @@ Verify with ``` free -h ``` or ``` swapon --show ```
 @ cli run:
 ``` reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /ve /d "" /f ```
 then reboot
+
+## Remove a cached PSK for an SSID for a windows machine
+This came about when an end user was unable to connect to an SSID in an office that was broadcasting the same SSID, but utilizing a different PSK than the office they typically work in.  Workstation would freeze for several minutes trying to connect, and not prompt the user to reenter the password.
+``` netsh wlan delete profile name=SSID ```
