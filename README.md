@@ -76,3 +76,7 @@ then reboot
 This came about when an end user was unable to connect to an SSID in an office that was broadcasting the same SSID, but utilizing a different PSK than the office they typically work in.  Workstation would freeze for several minutes trying to connect, and not prompt the user to reenter the password.
 
 ``` netsh wlan delete profile name=SSID ```
+
+## Get WAN IP from CLI in nix box
+
+``` dig +short txt ch whoami.cloudflare @1.0.0.1 ```
