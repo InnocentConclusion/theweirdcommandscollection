@@ -80,3 +80,9 @@ This came about when an end user was unable to connect to an SSID in an office t
 ## Get WAN IP from CLI in nix box
 
 ``` dig +short txt ch whoami.cloudflare @1.0.0.1 ```
+
+## Force an RDP session on a remote Windows Server after a reboot, and the RDP service hasn't started.
+
+From your local machine, run in cmd:
+
+``` mstsc /v:serveripaddress /admin ```
